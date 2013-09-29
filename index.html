@@ -1,1 +1,282 @@
-My GitHub Page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JSFest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JSFest, JavaScript Festival">
+    <meta name="author" content="Mikeal Rogers">
+
+    <!-- Le styles -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"> -->
+
+    <link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <script>
+
+      var themes = ['mikeal-eu']
+
+      var theme = themes[Math.floor(Math.random()*themes.length)]
+
+      var style = document.createElement('link')
+      style.setAttribute('href', 'themes/'+theme+'.css')
+      style.setAttribute('rel', 'stylesheet')
+
+
+      var url = 'themes/'+theme+'.jpg'
+
+      var bkg = document.createElement('style')
+      bkg.setAttribute('type', 'text/css')
+      bkg.innerHTML = ".jumbotron { background-image: url('"+url+"'); }"
+
+      document.getElementsByTagName('head')[0].appendChild(style)
+      document.getElementsByTagName('head')[0].appendChild(bkg)
+
+    </script>
+    <style type="text/css">
+
+      body {
+        font-family: 'Libre Baskerville', serif;
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: 'Playball', cursive;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 10px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        text-align: center;
+        color:white;
+        text-shadow: #303030 -1px 0, #303030	0 -1px,
+             rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+             #303030 -1px -1px, rgba(255,255,255,0.1) 1px 1px;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .main {
+        display:block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .ticket-buy {
+        text-align: center;
+      }
+
+      .speaker-pic {
+        max-width: 90px;
+        max-height: 90px;
+      	border-radius: 150px;
+      	-webkit-border-radius: 150px;
+      	-moz-border-radius: 150px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+      	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+      	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+      }
+
+      .speakers-row {
+        text-align: center;
+      }
+
+      .dates {
+        text-align:center;
+      }
+
+      .clock {
+        max-height:21px;
+        padding-bottom:6px;
+      }
+    </style>
+    <!-- <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="bootstrap/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+      <div class="container">
+        <div class="jumbotron">
+          <h1>JSFest</h1>
+          <p class="lead">A JavaScript celebration, presented by the Community.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container-narrow">
+
+        <div class="container dates">
+          <h1>San Francisco, March, 2014</h1>
+        </div>
+
+        <div class="container speakers-row">
+          <h2>Featuring...</h2>
+          <br/>
+          <div class="row-fluid">
+            <a href="https://github.com/voodootikigod">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://0.gravatar.com/avatar/fff2222d0a24009fe938bba62946201a?d=https%3A%2F%2Fidenticons.github.com%2F7fe1f8abaad094e0b5cb1b01d712f708.png&s=420"></img>
+                <h5>Chris Williams</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/jlord">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://2.gravatar.com/avatar/e26a281b6bd0c2145e8d0fcc834a56fb?d=https%3A%2F%2Fidenticons.github.com%2Fade5e2465252b6db5f8068257de2c41f.png&s=420"></img>
+                <h5>Jessica Lord</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/substack">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://0.gravatar.com/avatar/d4a2f12ceae3b7f211b661576d22bfb9?d=https%3A%2F%2Fidenticons.github.com%2F84adf1b967670705085ec0ca0cf48e31.png&s=420"></img>
+                <h5>Substack</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/rockbot">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://2.gravatar.com/avatar/4724c777bb5f3e6c131a9fa2cf656b44?d=https%3A%2F%2Fidenticons.github.com%2F6cb98afd885c22cb2b3ee2d45bd7734a.png&s=420"></img>
+                <h5>Raquel Vélez</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/maxogden">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://2.gravatar.com/avatar/fcc9bbfe2a31c5a6225cc287ed7ae2a6?d=https%3A%2F%2Fidenticons.github.com%2Fd2cec4ae765e49fa93728f323ca5894e.png&s=420"></img>
+                <h5>Max Ogden</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/hueniverse/">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://0.gravatar.com/avatar/28d0cb94cd9afcc9763dd64fea80a187?d=https%3A%2F%2Fidenticons.github.com%2F9e4b5b9b2461c934626eaf0b86d90c81.png&s=420"></img>
+                <h5>Eran Hammer</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/substack">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://0.gravatar.com/avatar/d4a2f12ceae3b7f211b661576d22bfb9?d=https%3A%2F%2Fidenticons.github.com%2F84adf1b967670705085ec0ca0cf48e31.png&s=420"></img>
+                <h5>Substack</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/rockbot">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://2.gravatar.com/avatar/4724c777bb5f3e6c131a9fa2cf656b44?d=https%3A%2F%2Fidenticons.github.com%2F6cb98afd885c22cb2b3ee2d45bd7734a.png&s=420"></img>
+                <h5>Raquel Vélez</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/maxogden">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://2.gravatar.com/avatar/fcc9bbfe2a31c5a6225cc287ed7ae2a6?d=https%3A%2F%2Fidenticons.github.com%2Fd2cec4ae765e49fa93728f323ca5894e.png&s=420"></img>
+                <h5>Max Ogden</h5>
+              </div>
+            </a>
+
+            <a href="https://github.com/hueniverse/">
+              <div class="speaker-info col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <img class="speaker-pic" src="https://0.gravatar.com/avatar/28d0cb94cd9afcc9763dd64fea80a187?d=https%3A%2F%2Fidenticons.github.com%2F9e4b5b9b2461c934626eaf0b86d90c81.png&s=420"></img>
+                <h5>Eran Hammer</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="container">
+          <div class="row-fluid">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <h2>Evolution of Experience</h2>
+              <h5>Sunday, March 9th</h5>
+              <p>How we develop has changed just as much as the experience our users have in our products. From scripting and scaffolding enabled by node.js to the new realities of building realtime and responsive applications you'll learn from the experience of industry and community leaders.</p>
+              <p>Topics: npm, browserify, backbone</p>
+              <div class="ticket-buy">
+                <a class="btn btn-large btn-success ticket-buy" href="#">Get Ticket</a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <h2>Scaling Down <span style="text-decoration:underline">and</span> Up</h2>
+              <h5>Monday, March 10th</h5>
+              <p>Can the tools we use to build a website in half a day also help us add features to an app that deploys to millions? Learn about tools and tricks to help you start fast and scale big in the front-end to the back-end.</p>
+              <p>Topics: node.js, WebSockets, WebRTC, bootstrap</p>
+              <div class="ticket-buy">
+                <a class="btn btn-large btn-success" href="#">Get Ticket</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="container">
+          <div class="row-fluid">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <h4>Crowd Funded</h4>
+              <p>Thanks to <a href="http://tito.io">tito.io</a> we are able to crowd fund each part of JSFest. This allows us to continue adding content to conference as long as there is demand from an audience for it.</p>
+
+              <h4>Venue</h4>
+              <p>JSFest will be in a one or more theatres centrally located in San Francisco.</p>
+
+              <h4>Hotels</h4>
+              <p>While we do not have a relationship with any hotels for matters of convenience we recommend: .</p>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <h4>Speaking at JSFest</h4>
+              <p>A link.</p>
+
+              <h4>Subheading</h4>
+              <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+              <h4>JSConf Family</h4>
+              <p>.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="container">
+          Domain name graciously donated by <a href="http://clock.co.uk"><img class="clock" src="http://clock.co.uk/images/structure/v1.0.2/logo.png"></img></a>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
