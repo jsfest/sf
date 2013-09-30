@@ -18,13 +18,19 @@
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
     <script>
-
       var themes = [ 'beanbags'
                    , 'mikeal-eu'
                    , 'eu'
                    ]
 
-      var theme = themes[Math.floor(Math.random()*themes.length)]
+      var i = parseInt(localStorage.themeIndex)
+      if (isNaN(i)) i = 0
+
+      if (i > (themes.length - 1)) i = 0
+
+      localStorage.themeIndex = i + 1
+
+      var theme = themes[i]
 
       var style = document.createElement('link')
       style.setAttribute('href', 'themes/'+theme+'.css')
