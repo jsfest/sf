@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JSFest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="JSFest, JavaScript Festival">
+    <meta name="author" content="Mikeal Rogers">
+
+    <!-- Le styles -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"> -->
+
+    <link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <script>
+      var themes = [ 'beanbags'
+                   , 'mikeal-eu'
+                   , 'eu'
+                   , 'micheil'
+                   , 'harth'
+                   , 'aaron'
+                   ]
+
+      var i = parseInt(localStorage.themeIndex)
+      if (isNaN(i)) i = 0
+
+      if (i > (themes.length - 1)) i = 0
+
+      localStorage.themeIndex = i + 1
+
+      var theme = themes[i]
+
+      var style = document.createElement('link')
+      style.setAttribute('href', 'themes/'+theme+'.css')
+      style.setAttribute('rel', 'stylesheet')
+
+
+      var url = 'themes/'+theme+'.jpg'
+
+      var bkg = document.createElement('style')
+      bkg.setAttribute('type', 'text/css')
+      bkg.innerHTML = ".jumbotron { background-image: url('"+url+"'); }"
+
+      document.getElementsByTagName('head')[0].appendChild(style)
+      document.getElementsByTagName('head')[0].appendChild(bkg)
+
+    </script>
+    <style type="text/css">
+
+      body {
+        font-family: 'Libre Baskerville', serif;
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: 'Playball', cursive;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 10px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        text-align: center;
+        color:white;
+        text-shadow: #303030 -1px 0, #303030	0 -1px,
+             rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+             #303030 -1px -1px, rgba(255,255,255,0.1) 1px 1px;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+        text-shadow: #303030 -1px 0, #303030	0 -1px,
+             rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+             #303030 -1px -1px, rgba(255,255,255,0.1) 1px 1px;
+      }
+      .main {
+        display:block;
+        position: relative;
+      }
+
+      .ticket-buy {
+        text-align: center;
+      }
+
+      .speaker-pic {
+/*        max-width: 90px;
+        max-height: 90px;*/
+      	border-radius: 150px;
+      	-webkit-border-radius: 150px;
+      	-moz-border-radius: 150px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+      	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+      	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .8);
+      }
+
+      .speakers-row {
+        text-align: center;
+      }
+
+      .dates {
+        text-align:center;
+      }
+
+      .clock {
+        max-height:21px;
+        padding-bottom:6px;
+      }
+
+      .spns-needed {
+        font-size:80%;
+      }
+
+      .social {
+        padding-bottom:9px;
+      }
+
+      p {
+        font-size:80%;
+      }
+
+    </style>
+    <!-- <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="bootstrap/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+      <div class="container">
+        <div class="jumbotron">
+          <h1>JSFest</h1>
+          <p class="lead">A JavaScript celebration, presented by the Community.</p>
+        </div>
+      </div>
+
+      <div class="container dates">
+        <h1>Featuring...</h1>
+      </div>
+
+      <div class="container speakers-row">
+        <br/>
+        <div class="row-fluid">
+
+          <div id="voodootikigod" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://0.gravatar.com/avatar/fff2222d0a24009fe938bba62946201a?d=https%3A%2F%2Fidenticons.github.com%2F7fe1f8abaad094e0b5cb1b01d712f708.png&s=420"></img>
+            <h3>Chris Williams</h3>
+            <div class="social">
+              <a href="https://github.com/voodootikigod"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/voodootikigod"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p>Creator of <a href="http://jsconf.com">JSConf</a>, author of <a href="https://github.com/voodootikigod/node-serialport">node-serialport</a>, and CTO of <a href="http://www.saferaging.com/">Safer Aging</a>.</p>
+          </div>
+
+          <div id="jlord" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://2.gravatar.com/avatar/e26a281b6bd0c2145e8d0fcc834a56fb?d=https%3A%2F%2Fidenticons.github.com%2Fade5e2465252b6db5f8068257de2c41f.png&s=420"></img>
+            <h3>Jessica Lord</h3>
+            <div class="social">
+              <a href="https://github.com/jlord"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/jllord"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p><a href="http://www.codeforamerica.org/">Code For America</a> Alumni, author of <a href="https://github.com/jlord/sheetsee.js">sheetsee.js</a>, and <a href="https://github.com/about/team">Githubber</a>.</p>
+
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+
+          <div id="slexaxton" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://1.gravatar.com/avatar/7ea369b9b67a85f638af2e0f5d708d2d?d=https%3A%2F%2Fidenticons.github.com%2F57be49ee4d34fa2d286d78836c2b2c22.png&s=420"></img>
+            <h3>Alex Sexton</h3>
+            <div class="social">
+              <a href="https://github.com/slexaxton"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/slexaxton"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p class="speaker-desc">Curator of <a href="http://texasjavascript.com">TXJS</a>, author of <a href="https://github.com/SlexAxton/yepnope.js">yepnope</a> and <a href="https://github.com/SlexAxton/Jed">jed</a>, jQuery Board of Advisors member, and developer at <a href="https://stripe.com/">Stripe</a>.</p>
+          </div>
+
+          <div id="eran" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://0.gravatar.com/avatar/28d0cb94cd9afcc9763dd64fea80a187?d=https%3A%2F%2Fidenticons.github.com%2F9e4b5b9b2461c934626eaf0b86d90c81.png&s=420"></img>
+            <h3>Eran Hammer</h3>
+            <div class="social">
+              <a href="https://github.com/hueniverse"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/eranhammer"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p class="speaker-desc">Author of <a href="https://github.com/spumko/hapi">hapi</a> and <a href="https://github.com/hueniverse/hawk">hawk</a>, developer at <a href="https://walmartlabs.com/">Walmart Labs</a>.</p>
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+
+          <div id="rockbot" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://2.gravatar.com/avatar/4724c777bb5f3e6c131a9fa2cf656b44?d=https%3A%2F%2Fidenticons.github.com%2F6cb98afd885c22cb2b3ee2d45bd7734a.png&s=420"></img>
+            <h3>Raquel Vélez</h3>
+            <div class="social">
+              <a href="https://github.com/rockbot"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/rockbot"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p class="speaker-desc">NodeBot extraordinaire and developer at <a href="http://saucelabs.com/">Sauce Labs</a>.</p>
+          </div>
+
+          <div id="isaacs" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://1.gravatar.com/avatar/73a2b24daecb976af81e010b7a3ce3c6?d=https%3A%2F%2Fidenticons.github.com%2F903cc7be42d6fae3ae8c8be791ceeb74.png&s=420"></img>
+            <h3>Isaac Schlueter</h3>
+            <div class="social">
+              <a href="https://github.com/isaacs"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/izs"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p class="speaker-desc">Creator of<a href="https://npmjs.org/">npm</a> and current BDFL of <a href="http://nodejs.org/">node.js</a>.</p>
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+
+          <div id="admc" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://0.gravatar.com/avatar/1b021cd1104fb55fcc2e5d505a894bf6?d=https%3A%2F%2Fidenticons.github.com%2Fc9319967c038f9b923068dabdf60cfe3.png&s=420"></img>
+            <h3>Adam Christian</h3>
+            <div class="social">
+              <a href="https://github.com/admc"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/admc"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p class="speaker-desc">Creator of <a href="https://github.com/admc/jellyfish/">jellyfish</a> and VP of Engineering at<a href="http://saucelabs.com/">Sauce Labs</a>.</p>
+          </div>
+
+          <div id="guille" class="speaker-info col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            <img class="speaker-pic img-responsive" src="https://2.gravatar.com/avatar/486e20e16ef676a02ac0299d2f92b813?d=https%3A%2F%2Fidenticons.github.com%2F2ca1ce4a65bf5b60c60bd7c4a89a33f9.png&s=420"></img>
+            <h3>Guillermo Rauch</h3>
+            <div class="social">
+              <a href="https://github.com/guille"><img class="github" src="https://raw.github.com/github/media/master/octocats/blacktocat-32.png"></img></a>
+              <a href="https://twitter.com/guille"><img class="twitter" src="themes/twitter.png"></img></a>
+            </div>
+            <p class="speaker-desc">Creator <a href="https://github.com/LearnBoost/socket.io">socket.io</a> and <a href="https://github.com/LearnBoost/engine.io">engine.io</a>, Founder at <a href="https://github.com/LearnBoost">LearnBoost</a>(now part of Automattic) creators of <a href="http://cloudup.com">cloudup</a>.</p>
+          </div>
+
+          <div class="clearfix visible-xs"></div>
+
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <p>Refresh this page to see different themes :)</p>
+      </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
